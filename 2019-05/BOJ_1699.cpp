@@ -43,6 +43,7 @@ int main() {
     for(int i=1; i<=r; i++) {
         for(int j = i*i; j<=n; j++) {
             dp[j] = min(dp[j], dp[j-i*i]+1);
+            //printing(n);
         }
     }
     cout<<dp[n]<<endl;
