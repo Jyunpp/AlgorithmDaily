@@ -52,7 +52,7 @@ int main() {
         if (c < arr[a][b]) {
             arr[a][b] = arr[b][a] = c;
 
-            vector<int> v; v.pb(a); v.pb(b);s
+            vector<int> v; v.pb(a); v.pb(b);
             for(int k : v) {
                 rep(i, 1, n+1) {
                     rep(j, 1, n+1) {
