@@ -1,4 +1,5 @@
 # 20200117 23:30 ~ 23:42
+# 20200118 00:45 ~ 00:50
 
 n, m = map(int, input().split())
 
@@ -8,7 +9,7 @@ l = len(b)
 for i in range(l):
     b.append(m + b[i])
 
-ans = -1
+ans = 987654321
 for i in range(n):
     isEnded = True
     diff = b[i] - a[0]
@@ -17,6 +18,8 @@ for i in range(n):
             isEnded = False
             break
     if isEnded == True:
-        ans = abs(diff)
-        break
+        currAns = diff
+        if currAns < 0:
+            currAns += m
+        ans = min(ans, currAns)
 print(ans)
