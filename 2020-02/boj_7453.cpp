@@ -1,4 +1,5 @@
 // 20200217 23:10 ~ 23:17 ~ 23:33
+// 20200218 00:00 ~ 00:04
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -84,7 +85,7 @@ int main() {
     int j=0;
     while(i<comp1.size() && j<inverseComp2.size()) {
         if (comp1[i].xx == inverseComp2[j].xx) {
-            ans += comp1[i].yy * inverseComp2[j].yy;
+            ans += ll(comp1[i].yy) * ll(inverseComp2[j].yy);
             i++;
             j++;
         } else {
