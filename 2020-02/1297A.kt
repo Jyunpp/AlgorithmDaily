@@ -2,7 +2,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.util.*
 
-// 20200227 10:35 ~ 10:41
+// 20200227 10:35 ~ 10:41 
 fun main(args: Array<String>) = with (BufferedReader(InputStreamReader(System.`in`))) {
     val sc = Scanner(System.`in`)
     for (t in 1..sc.nextInt()) {
