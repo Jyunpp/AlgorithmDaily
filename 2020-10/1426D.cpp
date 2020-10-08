@@ -28,22 +28,24 @@ int n;
 
 int main() {
     cin>>n;
-    vector<ll> ps(n+1, 0);
+    vector<ll> v(n+1, 0);
     for(int i=1; i<=n; i++) {
-        ll a; cin>>a;
-        ps[i] = a + ps[i-1];
+        cin>>v[i];
     }
 
     int ret = 0;
-    map<int, int> mp;
+    map<ll, int> mp;
     mp[0] = 1;
+    ll curr = 0;
     for(int i=1; i<=n; i++) {
-        if(mp[ps[i]]) {
+        curr += v[i];
+        if(mp[curr]) {
             ret++;
             mp.clear();
             mp[0] = 1;
+            curr = v[i];
         }
-        mp[ps[i]] = 1;
+        mp[curr] = 1;
     }
 
     cout<<ret<<endl;
